@@ -29,8 +29,6 @@
 		6F1BA6431C78B1EF000CD82C /* UIDevice+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA61A1C78B1EF000CD82C /* UIDevice+extend.m */; };
 		6F1BA6441C78B1EF000CD82C /* UIDevice+KeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA61C1C78B1EF000CD82C /* UIDevice+KeyChain.m */; };
 		6F1BA6451C78B1EF000CD82C /* UIImage+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA61E1C78B1EF000CD82C /* UIImage+extend.m */; };
-		6F1BA6461C78B1EF000CD82C /* UIImage+Stretchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6201C78B1EF000CD82C /* UIImage+Stretchable.m */; };
-		6F1BA6471C78B1EF000CD82C /* UIImage+Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6221C78B1EF000CD82C /* UIImage+Water.m */; };
 		6F1BA6481C78B1EF000CD82C /* UILabelWithBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6241C78B1EF000CD82C /* UILabelWithBorder.m */; };
 		6F1BA6491C78B1EF000CD82C /* UILabelWithLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6261C78B1EF000CD82C /* UILabelWithLine.m */; };
 		6F1BA64A1C78B1EF000CD82C /* UINavigationController+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6281C78B1EF000CD82C /* UINavigationController+extend.m */; };
@@ -41,6 +39,7 @@
 		6F1BA64F1C78B1EF000CD82C /* UIView+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6321C78B1EF000CD82C /* UIView+extend.m */; };
 		6F1BA6501C78B1EF000CD82C /* UIViewController+bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6341C78B1EF000CD82C /* UIViewController+bar.m */; };
 		6F1BA6511C78B1EF000CD82C /* UIViewController+Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6361C78B1EF000CD82C /* UIViewController+Nav.m */; };
+		6F2E14081C79BB1600CAB063 /* UIControl+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E14071C79BB1600CAB063 /* UIControl+extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +103,6 @@
 		6F1BA61C1C78B1EF000CD82C /* UIDevice+KeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KeyChain.m"; sourceTree = "<group>"; };
 		6F1BA61D1C78B1EF000CD82C /* UIImage+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extend.h"; sourceTree = "<group>"; };
 		6F1BA61E1C78B1EF000CD82C /* UIImage+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extend.m"; sourceTree = "<group>"; };
-		6F1BA61F1C78B1EF000CD82C /* UIImage+Stretchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stretchable.h"; sourceTree = "<group>"; };
-		6F1BA6201C78B1EF000CD82C /* UIImage+Stretchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stretchable.m"; sourceTree = "<group>"; };
-		6F1BA6211C78B1EF000CD82C /* UIImage+Water.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Water.h"; sourceTree = "<group>"; };
-		6F1BA6221C78B1EF000CD82C /* UIImage+Water.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Water.m"; sourceTree = "<group>"; };
 		6F1BA6231C78B1EF000CD82C /* UILabelWithBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelWithBorder.h; sourceTree = "<group>"; };
 		6F1BA6241C78B1EF000CD82C /* UILabelWithBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelWithBorder.m; sourceTree = "<group>"; };
 		6F1BA6251C78B1EF000CD82C /* UILabelWithLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelWithLine.h; sourceTree = "<group>"; };
@@ -128,6 +123,8 @@
 		6F1BA6341C78B1EF000CD82C /* UIViewController+bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+bar.m"; sourceTree = "<group>"; };
 		6F1BA6351C78B1EF000CD82C /* UIViewController+Nav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Nav.h"; sourceTree = "<group>"; };
 		6F1BA6361C78B1EF000CD82C /* UIViewController+Nav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Nav.m"; sourceTree = "<group>"; };
+		6F2E14061C79BB1600CAB063 /* UIControl+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+extend.h"; sourceTree = "<group>"; };
+		6F2E14071C79BB1600CAB063 /* UIControl+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+extend.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,16 +276,14 @@
 				6F1BA6161C78B1EF000CD82C /* UIButton+extend.m */,
 				6F1BA6171C78B1EF000CD82C /* UIColor+extend.h */,
 				6F1BA6181C78B1EF000CD82C /* UIColor+extend.m */,
+				6F2E14061C79BB1600CAB063 /* UIControl+extend.h */,
+				6F2E14071C79BB1600CAB063 /* UIControl+extend.m */,
 				6F1BA6191C78B1EF000CD82C /* UIDevice+extend.h */,
 				6F1BA61A1C78B1EF000CD82C /* UIDevice+extend.m */,
 				6F1BA61B1C78B1EF000CD82C /* UIDevice+KeyChain.h */,
 				6F1BA61C1C78B1EF000CD82C /* UIDevice+KeyChain.m */,
 				6F1BA61D1C78B1EF000CD82C /* UIImage+extend.h */,
 				6F1BA61E1C78B1EF000CD82C /* UIImage+extend.m */,
-				6F1BA61F1C78B1EF000CD82C /* UIImage+Stretchable.h */,
-				6F1BA6201C78B1EF000CD82C /* UIImage+Stretchable.m */,
-				6F1BA6211C78B1EF000CD82C /* UIImage+Water.h */,
-				6F1BA6221C78B1EF000CD82C /* UIImage+Water.m */,
 				6F1BA6231C78B1EF000CD82C /* UILabelWithBorder.h */,
 				6F1BA6241C78B1EF000CD82C /* UILabelWithBorder.m */,
 				6F1BA6251C78B1EF000CD82C /* UILabelWithLine.h */,
@@ -419,8 +414,8 @@
 				6F1BA63B1C78B1EF000CD82C /* NSFileManager+extend.m in Sources */,
 				6F1BA6381C78B1EF000CD82C /* NSDate+extend.m in Sources */,
 				6F1BA6391C78B1EF000CD82C /* NSECoreConstants.m in Sources */,
+				6F2E14081C79BB1600CAB063 /* UIControl+extend.m in Sources */,
 				6F1BA6511C78B1EF000CD82C /* UIViewController+Nav.m in Sources */,
-				6F1BA6471C78B1EF000CD82C /* UIImage+Water.m in Sources */,
 				6F1BA6441C78B1EF000CD82C /* UIDevice+KeyChain.m in Sources */,
 				6F1BA64F1C78B1EF000CD82C /* UIView+extend.m in Sources */,
 				6F1BA6411C78B1EF000CD82C /* UIButton+extend.m in Sources */,
@@ -444,7 +439,6 @@
 				6F1BA64B1C78B1EF000CD82C /* UITableViewCell+extend.m in Sources */,
 				6F1BA64A1C78B1EF000CD82C /* UINavigationController+extend.m in Sources */,
 				6F1BA6491C78B1EF000CD82C /* UILabelWithLine.m in Sources */,
-				6F1BA6461C78B1EF000CD82C /* UIImage+Stretchable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +642,7 @@
 				6F1BA5EE1C78B1A4000CD82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F1BA5EF1C78B1A4000CD82C /* Build configuration list for PBXNativeTarget "CategoryTests" */ = {
 			isa = XCConfigurationList;
@@ -656,6 +651,7 @@
 				6F1BA5F11C78B1A4000CD82C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
