@@ -35,11 +35,19 @@ typedef enum{
 @property (nonatomic, assign) CGFloat Y;
 @property (nonatomic, assign) CGFloat X;
 @property (assign, nonatomic) CGFloat centerX;
-@property (assign, nonatomic) CGFloat maxY;
+
+@property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
+@property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
+@property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
+@property (nonatomic) CGFloat bottom;      ///< Shortcut for frame.origin.y + frame.size.height
+
+@property (nonatomic) CGFloat centerY;     ///< Shortcut for center.y
+@property (nonatomic) CGPoint origin;      ///< Shortcut for frame.origin.
+@property (nonatomic) CGSize  size;        ///< Shortcut for frame.size.
 /**
  *  所在控制器
  */
-@property(nonatomic,strong,readonly)id controller;
+@property(nonatomic,readonly)id viewController;
 /**
  *  中心位置
  */
@@ -107,5 +115,7 @@ typedef enum{
  *  圆角
  */
 -(void)setRadius:(CGFloat)r;
+
+
 
 @end

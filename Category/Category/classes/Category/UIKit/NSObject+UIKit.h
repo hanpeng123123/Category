@@ -22,3 +22,6 @@
 #import "UIViewController+bar.h"
 #import "UIDevice+KeyChain.h"
 #import "UIControl+extend.h"
+#import "UIBarButtonItem+extend.h"
+#import "UIGestureRecognizer+extend.h"
+#import "UITableView+extend.h"

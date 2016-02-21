@@ -16,12 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
+    self.navigationItem.leftBarButtonItem.actionBlock = ^(id sender){
+ 
+        NSLog(@"111");
+    
+    };
+      UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
     [btn addTarget:self action:@selector(click1) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor redColor];
-     [btn setTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-   
+    
 }
 
 -(void)click1

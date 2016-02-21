@@ -40,6 +40,9 @@
 		6F1BA6501C78B1EF000CD82C /* UIViewController+bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6341C78B1EF000CD82C /* UIViewController+bar.m */; };
 		6F1BA6511C78B1EF000CD82C /* UIViewController+Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BA6361C78B1EF000CD82C /* UIViewController+Nav.m */; };
 		6F2E14081C79BB1600CAB063 /* UIControl+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E14071C79BB1600CAB063 /* UIControl+extend.m */; };
+		6F2E140B1C79F44600CAB063 /* UIBarButtonItem+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E140A1C79F44600CAB063 /* UIBarButtonItem+extend.m */; };
+		6F2E140E1C79FEF200CAB063 /* UIGestureRecognizer+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E140D1C79FEF200CAB063 /* UIGestureRecognizer+extend.m */; };
+		6F2E14111C7A0AB000CAB063 /* UITableView+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E14101C7A0AB000CAB063 /* UITableView+extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,12 @@
 		6F1BA6361C78B1EF000CD82C /* UIViewController+Nav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Nav.m"; sourceTree = "<group>"; };
 		6F2E14061C79BB1600CAB063 /* UIControl+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+extend.h"; sourceTree = "<group>"; };
 		6F2E14071C79BB1600CAB063 /* UIControl+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+extend.m"; sourceTree = "<group>"; };
+		6F2E14091C79F44600CAB063 /* UIBarButtonItem+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+extend.h"; sourceTree = "<group>"; };
+		6F2E140A1C79F44600CAB063 /* UIBarButtonItem+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+extend.m"; sourceTree = "<group>"; };
+		6F2E140C1C79FEF200CAB063 /* UIGestureRecognizer+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+extend.h"; sourceTree = "<group>"; };
+		6F2E140D1C79FEF200CAB063 /* UIGestureRecognizer+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+extend.m"; sourceTree = "<group>"; };
+		6F2E140F1C7A0AB000CAB063 /* UITableView+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+extend.h"; sourceTree = "<group>"; };
+		6F2E14101C7A0AB000CAB063 /* UITableView+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+extend.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +287,10 @@
 				6F1BA6181C78B1EF000CD82C /* UIColor+extend.m */,
 				6F2E14061C79BB1600CAB063 /* UIControl+extend.h */,
 				6F2E14071C79BB1600CAB063 /* UIControl+extend.m */,
+				6F2E14091C79F44600CAB063 /* UIBarButtonItem+extend.h */,
+				6F2E140A1C79F44600CAB063 /* UIBarButtonItem+extend.m */,
+				6F2E140C1C79FEF200CAB063 /* UIGestureRecognizer+extend.h */,
+				6F2E140D1C79FEF200CAB063 /* UIGestureRecognizer+extend.m */,
 				6F1BA6191C78B1EF000CD82C /* UIDevice+extend.h */,
 				6F1BA61A1C78B1EF000CD82C /* UIDevice+extend.m */,
 				6F1BA61B1C78B1EF000CD82C /* UIDevice+KeyChain.h */,
@@ -292,6 +305,8 @@
 				6F1BA6281C78B1EF000CD82C /* UINavigationController+extend.m */,
 				6F1BA6291C78B1EF000CD82C /* UITableViewCell+extend.h */,
 				6F1BA62A1C78B1EF000CD82C /* UITableViewCell+extend.m */,
+				6F2E140F1C7A0AB000CAB063 /* UITableView+extend.h */,
+				6F2E14101C7A0AB000CAB063 /* UITableView+extend.m */,
 				6F1BA62B1C78B1EF000CD82C /* UITextField+extend.h */,
 				6F1BA62C1C78B1EF000CD82C /* UITextField+extend.m */,
 				6F1BA62D1C78B1EF000CD82C /* UITextView+extend.h */,
@@ -421,8 +436,10 @@
 				6F1BA6411C78B1EF000CD82C /* UIButton+extend.m in Sources */,
 				6F1BA6371C78B1EF000CD82C /* NSData+extend.m in Sources */,
 				6F1BA6451C78B1EF000CD82C /* UIImage+extend.m in Sources */,
+				6F2E140B1C79F44600CAB063 /* UIBarButtonItem+extend.m in Sources */,
 				6F1BA5D51C78B1A4000CD82C /* ViewController.m in Sources */,
 				6F1BA6501C78B1EF000CD82C /* UIViewController+bar.m in Sources */,
+				6F2E14111C7A0AB000CAB063 /* UITableView+extend.m in Sources */,
 				6F1BA64C1C78B1EF000CD82C /* UITextField+extend.m in Sources */,
 				6F1BA6401C78B1EF000CD82C /* CLPlacemark+extend.m in Sources */,
 				6F1BA63E1C78B1EF000CD82C /* NSString+extend.m in Sources */,
@@ -431,6 +448,7 @@
 				6F1BA5CF1C78B1A4000CD82C /* main.m in Sources */,
 				6F1BA6431C78B1EF000CD82C /* UIDevice+extend.m in Sources */,
 				6F1BA6481C78B1EF000CD82C /* UILabelWithBorder.m in Sources */,
+				6F2E140E1C79FEF200CAB063 /* UIGestureRecognizer+extend.m in Sources */,
 				6F1BA63C1C78B1EF000CD82C /* NSNumber+extend.m in Sources */,
 				6F1BA6421C78B1EF000CD82C /* UIColor+extend.m in Sources */,
 				6F1BA63A1C78B1EF000CD82C /* NSException+extend.m in Sources */,

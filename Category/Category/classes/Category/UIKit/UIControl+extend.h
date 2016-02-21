@@ -10,6 +10,7 @@
 
 @interface UIControl (extend)
 
+- (void)addTouchUpInsideTarget:(id)target action:(SEL)action;
 /**
  Removes all targets and actions for a particular event (or events)
  from an internal dispatch table.
@@ -32,6 +33,7 @@
  */
 - (void)setTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
+
 /**
  Adds a block for a particular event (or events) to an internal dispatch table.
  It will cause a strong reference to @a block.
@@ -43,7 +45,7 @@
  action message is sent.
  */
 - (void)addBlockForControlEvents:(UIControlEvents)controlEvents block:(void (^)(id sender))block;
-
+- (void)addBlockForEventTouchUpInsideBlock:(void (^)(id sender))block;
 /**
  Adds or replaces a block for a particular event (or events) to an internal
  dispatch table. It will cause a strong reference to @a block.
@@ -55,7 +57,7 @@
  action message is sent.
  */
 - (void)setBlockForControlEvents:(UIControlEvents)controlEvents block:(void (^)(id sender))block;
-
+- (void)setBlockForEventTouchUpInsideBlock:(void (^)(id sender))block;
 /**
  Removes all blocks for a particular event (or events) from an internal
  dispatch table.
