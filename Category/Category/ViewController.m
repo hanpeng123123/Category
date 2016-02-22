@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "NSObjectExtend.h"
+#import "TextBtn.h"
+#import "TextViewController.h"
+
+
 @interface ViewController ()
 @property(nonatomic,weak)UIImageView * imageview;
 @end
@@ -16,28 +20,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem.actionBlock = ^(id sender){
+    
+    
+    TextBtn * btn = [[TextBtn alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
+    btn.backgroundColor = rgba(254, 25, 23, 0.5);
+    
+   
+    
+    NSLog(@"%u",btn.backgroundColor.rgbaValue);
+  
+    [btn addObserverBlockForKeyPath:@"frame" block:^(__weak id obj, id oldVal, id newVal) {
+      
+        NSLog(@"%@----%@-----%@",obj,oldVal,newVal);
+    }];
+    
  
-        NSLog(@"111");
     
-    };
-      UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
-    [btn addTarget:self action:@selector(click1) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor redColor];
-    [btn setTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    
+   [self setAssociateValue:btn withKey:@"btn"];
+   
+    
+//    btn.backgroundColor = [UIColor redColor];
+//    [btn setTarget:self action:@selector(click2:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    UITableView * tab = [[UITableView alloc]init];
+//  NSLog(@"%@", [UITableView buildDate] );
+//    [self addObserver:self forKeyPath:@"btnBan" options:NSKeyValueObservingOptionNew |NSKeyValueObservingOptionOld context:nil];
     
 }
 
--(void)click1
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [[self getAssociatedValueForKey:@"btn"] setFrame:CGRectMake(250, 250, 50, 50)];
 
-    NSLog(@"1");
+   
+
 }
--(void)click2
+-(void)click2:(UIButton * )btn
 {
-    
-    NSLog(@"2");
+   
+   btn.backgroundColor = [UIColor blackColor];
+}
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath  isEqual:@"btnBan"]) {
+        NSLog(@"%@",change);
+    }
+
 }
 
 @end

@@ -24,4 +24,7 @@
 #import "UIBarButtonItem+extend.h"
 #import "UIGestureRecognizer+extend.h"
 #import "UITableView+extend.h"
+#import "UIFont+extend.h"
 #import "UIScreen+extend.h"
+#import "UIScrollView+extend.h"
+

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define rgb(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 @interface UIColor(UIColor_exetnd)
 
 /**
@@ -60,4 +61,10 @@
  object is in the device RGB colorspace.
  */
 + (UIColor *)colorWithRGB:(uint32_t)rgbValue alpha:(CGFloat)alpha;
+/**
+
+ 随机色
+ */
++(UIColor *) randomColor;
+
 @end

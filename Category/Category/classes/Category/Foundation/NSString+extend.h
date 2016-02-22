@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 /// 数字转字符串，快捷宏
 #define IntToString(value)              [NSString stringWithFormat:@"%d", (int)(value)]
 #define FloatToString(value)            [NSString stringWithFormat:@"%f", (float)(value)]
@@ -190,5 +190,98 @@
 
 /// 秒数转描述性时间, ex. 3天5小时3分钟
 +(NSString *)secondsToDateString:(NSInteger)time;
+
+#pragma mark - Drawing
+///=============================================================================
+/// @name Drawing
+///=============================================================================
+
+/**
+ Returns the size of the string if it were rendered with the specified constraints.
+ 
+ @param font          The font to use for computing the string size.
+ 
+ @param size          The maximum acceptable size for the string. This value is
+ used to calculate where line breaks and wrapping would occur.
+ 
+ @param lineBreakMode The line break options for computing the size of the string.
+ For a list of possible values, see NSLineBreakMode.
+ 
+ @return              The width and height of the resulting string's bounding box.
+ These values may be rounded up to the nearest whole number.
+ */
+- (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode;
+
+/**
+ Returns the width of the string if it were to be rendered with the specified
+ font on a single line.
+ 
+ @param font  The font to use for computing the string width.
+ 
+ @return      The width of the resulting string's bounding box. These values may be
+ rounded up to the nearest whole number.
+ */
+- (CGFloat)widthForFont:(UIFont *)font;
+
+/**
+ Returns the height of the string if it were rendered with the specified constraints.
+ 
+ @param font   The font to use for computing the string size.
+ 
+ @param width  The maximum acceptable width for the string. This value is used
+ to calculate where line breaks and wrapping would occur.
+ 
+ @return       The height of the resulting string's bounding box. These values
+ may be rounded up to the nearest whole number.
+ */
+- (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width;
+
+- (BOOL)containsCharacterSet:(NSCharacterSet *)set;
+- (NSRange)rangeOfAll;
+#pragma mark - Regular Expression
+///=============================================================================
+/// @name Regular Expression
+///=============================================================================
+
+/**
+ Whether it can match the regular expression
+ 
+ @param regex  The regular expression
+ @param options     The matching options to report.
+ @return YES if can match the regex; otherwise, NO.
+ */
+- (BOOL)matchesRegex:(NSString *)regex options:(NSRegularExpressionOptions)options;
+
+/**
+ Match the regular expression, and executes a given block using each object in the matches.
+ 
+ @param regex    The regular expression
+ @param options  The matching options to report.
+ @param block    The block to apply to elements in the array of matches.
+ The block takes four arguments:
+ match: The match substring.
+ matchRange: The matching options.
+ stop: A reference to a Boolean value. The block can set the value
+ to YES to stop further processing of the array. The stop
+ argument is an out-only argument. You should only ever set
+ this Boolean to YES within the Block.
+ */
+- (void)enumerateRegexMatches:(NSString *)regex
+                      options:(NSRegularExpressionOptions)options
+                   usingBlock:(void (^)(NSString *match, NSRange matchRange, BOOL *stop))block;
+
+/**
+ Returns a new string containing matching regular expressions replaced with the template string.
+ 
+ @param regex       The regular expression
+ @param options     The matching options to report.
+ @param replacement The substitution template used when replacing matching instances.
+ 
+ @return A string with matching regular expressions replaced by the template string.
+ */
+- (NSString *)stringByReplacingRegex:(NSString *)regex
+                             options:(NSRegularExpressionOptions)options
+                          withString:(NSString *)replacement;
+
 
 @end
