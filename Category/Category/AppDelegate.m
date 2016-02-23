@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObjectExtend.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<MFMailComposeViewControllerDelegate>
+
 
 @end
 
@@ -16,9 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+  
+        [NSException startUncatchExceptionWithHandlerBlock:^BOOL(NSString *info) {
+            NSString *urlStr = [NSString stringWithFormat:@"mailto://137526523@qq.com?subject=bug报告&body=感谢您的配合! \n 错误详情: \n %@", info];
+            NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            [[UIApplication sharedApplication] openURL:url];
+            return YES;
+            
+        }];
+
+ 
+  
     return YES;
 }
+    
+    
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -41,5 +57,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

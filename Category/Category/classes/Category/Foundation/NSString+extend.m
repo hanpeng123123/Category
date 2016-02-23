@@ -223,6 +223,16 @@
     }
 }
 
++ (NSString *)stringWithFileNamed:(NSString *)FileNamed;{
+    NSString *path = [[NSBundle mainBundle] pathForResource:FileNamed ofType:@""];
+    NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    if (!str) {
+        path = [[NSBundle mainBundle] pathForResource:FileNamed ofType:@"txt"];
+        str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    }
+    return str;
+}
+
 - (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode {
     CGSize result;
     if (!font) font = [UIFont systemFontOfSize:12];
@@ -246,6 +256,23 @@
     }
     return result;
 }
+-(CGSize)sizeWithFont:(UIFont *)font textW:(CGFloat )textW{
+    NSMutableDictionary *attr = [NSMutableDictionary dictionary ];
+    
+    attr[NSFontAttributeName] = font;
+    
+    CGSize size = CGSizeMake(textW, MAXFLOAT);
+    
+    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;
+}
+
+-(CGSize)sizeWithFont:(UIFont *)font
+{
+    
+    return [self sizeWithFont:font textW:MAXFLOAT];
+}
+
+
 
 - (CGFloat)widthForFont:(UIFont *)font {
     CGSize size = [self sizeForFont:font size:CGSizeMake(HUGE, HUGE) mode:NSLineBreakByWordWrapping];

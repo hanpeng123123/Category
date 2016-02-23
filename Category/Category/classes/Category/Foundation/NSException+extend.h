@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 typedef BOOL (^UncatchExceptionHandlerBlock) (NSString *info);
 
 @interface NSException (NSException_extend)
@@ -21,4 +22,12 @@ typedef BOOL (^UncatchExceptionHandlerBlock) (NSString *info);
  */
 + (void)startUncatchExceptionWithHandlerBlock:(UncatchExceptionHandlerBlock)block;
 
+/**
+ *  启动异常捕获，
+ *
+ *  @return 返回上一次处理的日志。
+ */
++ (NSString *)errorBackAndstartUncatchException;
+
++(void)clearErrorLog;
 @end

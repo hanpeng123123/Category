@@ -8,6 +8,7 @@
 
 #import "UIButton+extend.h"
 #import "UIImage+extend.h"
+#import "NSString+extend.h"
 
 @implementation UIButton (UIButton_extend)
 
@@ -58,6 +59,7 @@
     if (title.length)
     {
         UIFont * font = [UIFont systemFontOfSize:14];
+        
         size = [title sizeWithFont:font];
         size = CGSizeMake(size.width + 15, size.height + 15);
         

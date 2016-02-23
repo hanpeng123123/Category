@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183F63191C7BF3A600D377D1 /* singletonVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F63181C7BF3A600D377D1 /* singletonVIew.m */; };
 		186404CC1C7A983500F2EC87 /* UIBarButtonItem+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 186404A71C7A983500F2EC87 /* UIBarButtonItem+extend.m */; };
 		186404CD1C7A983500F2EC87 /* UIButton+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 186404A91C7A983500F2EC87 /* UIButton+extend.m */; };
 		186404CE1C7A983500F2EC87 /* UIColor+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 186404AB1C7A983500F2EC87 /* UIColor+extend.m */; };
@@ -45,7 +46,6 @@
 		6F3B36421C7B3B3500D47D95 /* NSObject+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B36321C7B3B3500D47D95 /* NSObject+extend.m */; };
 		6F3B36431C7B3B3500D47D95 /* NSString+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B36351C7B3B3500D47D95 /* NSString+extend.m */; };
 		6F3B36441C7B3B3500D47D95 /* NSDate_extend.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F3B36371C7B3B3500D47D95 /* NSDate_extend.strings */; };
-		6F3B36471C7B441F00D47D95 /* TextBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B36461C7B441F00D47D95 /* TextBtn.m */; };
 		6F3B364A1C7B491900D47D95 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B36491C7B491900D47D95 /* TextViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183F63171C7BF3A600D377D1 /* singletonVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singletonVIew.h; sourceTree = "<group>"; };
+		183F63181C7BF3A600D377D1 /* singletonVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singletonVIew.m; sourceTree = "<group>"; };
+		183F631A1C7BF97700D377D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		186404A51C7A983500F2EC87 /* NSObject+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UIKit.h"; sourceTree = "<group>"; };
 		186404A61C7A983500F2EC87 /* UIBarButtonItem+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+extend.h"; sourceTree = "<group>"; };
 		186404A71C7A983500F2EC87 /* UIBarButtonItem+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+extend.m"; sourceTree = "<group>"; };
@@ -142,8 +145,6 @@
 		6F3B36391C7B3B3500D47D95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NSDate_extend.strings; sourceTree = "<group>"; };
 		6F3B363A1C7B3B3500D47D95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NSDate_extend.strings"; sourceTree = "<group>"; };
 		6F3B363B1C7B3B3500D47D95 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/NSDate_extend.strings"; sourceTree = "<group>"; };
-		6F3B36451C7B441F00D47D95 /* TextBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBtn.h; sourceTree = "<group>"; };
-		6F3B36461C7B441F00D47D95 /* TextBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextBtn.m; sourceTree = "<group>"; };
 		6F3B36481C7B491900D47D95 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		6F3B36491C7B491900D47D95 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,10 +243,11 @@
 				6F1BA5D11C78B1A4000CD82C /* AppDelegate.m */,
 				6F1BA5D31C78B1A4000CD82C /* ViewController.h */,
 				6F1BA5D41C78B1A4000CD82C /* ViewController.m */,
+				183F63171C7BF3A600D377D1 /* singletonVIew.h */,
+				183F63181C7BF3A600D377D1 /* singletonVIew.m */,
 				6F3B36481C7B491900D47D95 /* TextViewController.h */,
 				6F3B36491C7B491900D47D95 /* TextViewController.m */,
-				6F3B36451C7B441F00D47D95 /* TextBtn.h */,
-				6F3B36461C7B441F00D47D95 /* TextBtn.m */,
+				183F631A1C7BF97700D377D1 /* PrefixHeader.pch */,
 				6F1BA5D61C78B1A4000CD82C /* Main.storyboard */,
 				6F1BA5D91C78B1A4000CD82C /* Images.xcassets */,
 				6F1BA5DB1C78B1A4000CD82C /* LaunchScreen.xib */,
@@ -387,11 +389,12 @@
 		6F1BA5C11C78B1A4000CD82C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = hanpeng;
 				TargetAttributes = {
 					6F1BA5C81C78B1A4000CD82C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = PN7M97K2HV;
 					};
 					6F1BA5E11C78B1A4000CD82C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -467,12 +470,12 @@
 				6F3B361F1C7B397600D47D95 /* UIFont+extend.m in Sources */,
 				6F3B363E1C7B3B3500D47D95 /* NSECoreConstants.m in Sources */,
 				6F1BA5CF1C78B1A4000CD82C /* main.m in Sources */,
-				6F3B36471C7B441F00D47D95 /* TextBtn.m in Sources */,
 				186404D91C7A983500F2EC87 /* UITextField+extend.m in Sources */,
 				186404D31C7A983500F2EC87 /* UILabelWithBorder.m in Sources */,
 				6F3B36421C7B3B3500D47D95 /* NSObject+extend.m in Sources */,
 				6F3B361C1C7B362400D47D95 /* UIScreen+extend.m in Sources */,
 				186404CC1C7A983500F2EC87 /* UIBarButtonItem+extend.m in Sources */,
+				183F63191C7BF3A600D377D1 /* singletonVIew.m in Sources */,
 				6F3B36411C7B3B3500D47D95 /* NSNumber+extend.m in Sources */,
 				6F3B36431C7B3B3500D47D95 /* NSString+extend.m in Sources */,
 				186404DA1C7A983500F2EC87 /* UITextView+extend.m in Sources */,
@@ -553,9 +556,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Category/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -597,6 +603,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Category/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -615,9 +623,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -625,9 +637,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -645,6 +661,7 @@
 				);
 				INFOPLIST_FILE = CategoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Category.app/Category";
 			};
@@ -660,6 +677,7 @@
 				);
 				INFOPLIST_FILE = CategoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Category.app/Category";
 			};

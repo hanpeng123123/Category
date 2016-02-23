@@ -13,7 +13,7 @@
 #define FloatToString(value)            [NSString stringWithFormat:@"%f", (float)(value)]
 #define DoubleToString(value)           [NSString stringWithFormat:@"%lf", (double)(value)]
 #define BOOLToString(value)             IntToString(value)
-
+ 
 
 /**
  *  保证字符串长度不为0
@@ -191,6 +191,8 @@
 /// 秒数转描述性时间, ex. 3天5小时3分钟
 +(NSString *)secondsToDateString:(NSInteger)time;
 
+
++ (NSString *)stringWithFileNamed:(NSString *)FileNamed;
 #pragma mark - Drawing
 ///=============================================================================
 /// @name Drawing
@@ -212,6 +214,9 @@
  */
 - (CGSize)sizeForFont:(UIFont *)font size:(CGSize)size mode:(NSLineBreakMode)lineBreakMode;
 
+-(CGSize)sizeWithFont:(UIFont *)font textW:(CGFloat )textW;
+
+-(CGSize)sizeWithFont:(UIFont *)font;
 /**
  Returns the width of the string if it were to be rendered with the specified
  font on a single line.

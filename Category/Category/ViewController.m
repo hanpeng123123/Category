@@ -8,11 +8,10 @@
 
 #import "ViewController.h"
 #import "NSObjectExtend.h"
-#import "TextBtn.h"
 #import "TextViewController.h"
-
-
-@interface ViewController ()
+#import "singletonVIew.h"
+#import <MessageUI/MFMailComposeViewController.h>
+@interface ViewController ()<MFMailComposeViewControllerDelegate>
 @property(nonatomic,weak)UIImageView * imageview;
 @end
 
@@ -20,46 +19,63 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self textBtn];
     
     
-    TextBtn * btn = [[TextBtn alloc]initWithFrame:CGRectMake(50, 50, 200, 200)];
-    btn.backgroundColor = rgba(254, 25, 23, 0.5);
     
-   
     
-    NSLog(@"%u",btn.backgroundColor.rgbaValue);
-  
-    [btn addObserverBlockForKeyPath:@"frame" block:^(__weak id obj, id oldVal, id newVal) {
-      
-        NSLog(@"%@----%@-----%@",obj,oldVal,newVal);
-    }];
     
+}
+-(void)textview
+{
+    
+    singletonVIew * view1 = [[singletonVIew alloc]init];
+    [self.view addSubview:view1];
+    view1.backgroundColor = rgb(100, 100, 100);
+    view1.frame = CGRectMake(0, 0, 200, 200);
+   [self.view addSubview:view1];
+    [self setAssociateValue:view1 withKey:@"btn"];
+    
+
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%@", [self getAssociatedValueForKey:@"btn"]);
  
     
     
-   [self setAssociateValue:btn withKey:@"btn"];
-   
     
-//    btn.backgroundColor = [UIColor redColor];
-//    [btn setTarget:self action:@selector(click2:) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    UITableView * tab = [[UITableView alloc]init];
-//  NSLog(@"%@", [UITableView buildDate] );
-//    [self addObserver:self forKeyPath:@"btnBan" options:NSKeyValueObservingOptionNew |NSKeyValueObservingOptionOld context:nil];
-    
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+}-(void)textBtn
 {
-    [[self getAssociatedValueForKey:@"btn"] setFrame:CGRectMake(250, 250, 50, 50)];
+    
+    UIButton * btn = [UIButton buttonWithTitle:@"我是按钮" target:self touchUpInsideAction:@selector(click2:)];
+    
+    btn.frame =CGRectMake(50, 50, 200, 200);
+    btn.backgroundColor = rgba(254, 25, 23, 0.5);
+    btn.center = CGPointMake(250, 250);
 
-   
+    [self.view addSubview:btn];
+    [btn setBorder:rgb(0, 0, 0) width:2];
+    [btn setRadius:5];
+    
+    [btn addObserverBlockForKeyPath:@"frame" block:^(__weak id obj, id oldVal, id newVal) {
+        
+        NSLog(@"%@----%@-----%@",obj,oldVal,newVal);
+    }];
+
+    [self setAssociateValue:btn withKey:@"btn"];
+    
+
 
 }
+
+
 -(void)click2:(UIButton * )btn
 {
-   
-   btn.backgroundColor = [UIColor blackColor];
+    
+       
+
 }
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
@@ -68,5 +84,15 @@
     }
 
 }
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"It's away!");
+    }
+    [controller dismissViewControllerAnimated:YES completion:nil];
+} ;
 
 @end

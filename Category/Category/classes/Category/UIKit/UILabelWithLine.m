@@ -7,7 +7,7 @@
 //
 
 #import "UILabelWithLine.h"
-
+#import "NSString+extend.h"
 @implementation UILabelWithLine
 
 - (void)drawTextInRect:(CGRect)rect{

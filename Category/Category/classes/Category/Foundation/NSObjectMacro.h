@@ -10,6 +10,39 @@
 #define NSObject_extend_NSObjectDefine_h
 
 
+#ifdef DEBUG
+#define myLog(...) NSLog(@"%s %d \n %@ \n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define myLog(...)
+#endif
+/*宏构造单例代码**/
+// .h
+#define singleton_interface(class) + (instancetype)shared##class;
+
+// .m
+#define singleton_implementation(class) \
+static class *_instance; \
+\
++ (id)allocWithZone:(struct _NSZone *)zone \
+{ \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+_instance = [super allocWithZone:zone]; \
+}); \
+\
+return _instance; \
+} \
+\
++ (instancetype)shared##class \
+{ \
+if (_instance == nil) { \
+_instance = [[class alloc] init]; \
+} \
+\
+return _instance; \
+}
+
+
 /*宏构造单例代码*/
 #define LX_GTMOBJECT_SINGLETON_BOILERPLATE_WITH_SHARED(_object_name_, _obj_shared_name_) \
 static _object_name_ *_##_object_name_ = nil; \
